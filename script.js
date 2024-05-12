@@ -11,10 +11,6 @@ const resize = document.querySelector("#resize");
 reset.addEventListener("click", (event) => resetGrid());
 resize.addEventListener("click", (event) => resizeGrid());
 
-let mouseDown = false;
-document.body.onmousedown = () => (mouseDown = true);
-document.body.onmouseup = () => (mouseDown = false);
-
 generateGrid(size);
 
 function generateGrid(size) {
@@ -52,7 +48,5 @@ function randomColor() {
 }
 
 function draw(e) {
-    if (mouseDown) {
-        e.target.style.backgroundColor = randomColor();
-    }
+    e.target.style.backgroundColor = randomColor();
 }
