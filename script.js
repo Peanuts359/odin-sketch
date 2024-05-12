@@ -33,11 +33,17 @@ function generateGrid(size) {
 }
 
 function resizeGrid() {
-    console.log("resizing");
+    gridSize = prompt("Enter a size (limit of 100): ", "");
+    if (gridSize > 0 && gridSize <= 100) {
+        size = gridSize;
+        generateGrid(size);
+    } else {
+        alert("Given value is out of range. Denied.");
+    }
 }
 
 function resetGrid() {
-    console.log("resetting");
+    generateGrid(size);
 }
 
 function randomColor() {
