@@ -3,16 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style.css">
-        <script ref="./script.js" defer></script>
         <title>Etch A Sketch</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" type="module"></script>
+        
     </head>
 
     <body>
-        <div class="buttons">
-            <button class="reset">Reset</button>
-            <button class="resize">Resize</button>
-        </div>
+        <header>
+            <h1>Etch A Sketch</h1>
+        </header>
+
         <div class="container"></div>
+
+        <div class="buttons">
+            <button id="reset">Reset Grid</button>
+            <button id="resize">Resize Grid</button>
+        </div>
+        
     </body>
 </html>
