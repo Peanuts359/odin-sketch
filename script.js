@@ -8,8 +8,8 @@ const grid = document.querySelector(".container");
 const reset = document.querySelector("#reset");
 const resize = document.querySelector("#resize");
 
-reset.addEventListener("click", (event) => resetGrid);
-resize.addEventListener("click", (event) => resizeGrid);
+reset.addEventListener("click", (event) => resetGrid());
+resize.addEventListener("click", (event) => resizeGrid());
 
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
@@ -32,12 +32,20 @@ function generateGrid(size) {
     }
 }
 
+function resizeGrid() {
+    console.log("resizing");
+}
+
+function resetGrid() {
+    console.log("resetting");
+}
+
 function randomColor() {
     return "#" + Math.floor(Math.random()*16777215).toString(16);
 }
 
 function draw(e) {
     if (mouseDown) {
-        e.target.style.backgroundColor = colorPicker.value;
+        e.target.style.backgroundColor = randomColor();
     }
 }
