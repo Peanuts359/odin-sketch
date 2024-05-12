@@ -33,7 +33,7 @@ function generateGrid(size) {
 }
 
 function resizeGrid() {
-    gridSize = prompt("Enter a size (limit of 100): ", "");
+    const gridSize = prompt("Enter a size (limit of 100): ", "");
     if (gridSize > 0 && gridSize <= 100) {
         size = gridSize;
         generateGrid(size);
@@ -44,6 +44,7 @@ function resizeGrid() {
 
 function resetGrid() {
     generateGrid(size);
+    alert("Grid reset.")
 }
 
 function randomColor() {
